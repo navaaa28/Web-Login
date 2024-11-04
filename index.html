@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+  <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+  <style>
+    /* Custom styling for hero section */
+    .hero {
+      background-image: url('images/logo.png');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .hero p {
+      font-size: 1.25rem;
+    }
+    /* Features section styling */
+    .features .col-md-4 {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .features img {
+      width: 100%; /* Make images take full width of container */
+      max-width: 250px; /* Set a maximum width for images */
+      height: auto; /* Keep aspect ratio */
+      border-radius: 15px; /* Slightly rounded corners for rectangular images */
+      margin-bottom: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+    }
+    .features h3 {
+      font-size: 1.2rem;
+      margin-top: 15px;
+    }
+    .features p {
+      font-size: 1rem;
+      color: #6c757d;
+    }
+    .logo-fixed {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 80px;
+      height: auto;
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+    }
+    .logo-fixed:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">MyWebsite</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="login.html">
+              Login
+              <div class="spinner-border text-muted" style="width: 1rem; height: 1rem; margin-left: 5px; display: none;" id="login-spinner"></div>
+            </a>
+          </li>          
+        <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Welcome to MyWebsite</h1>
+    <p>Your one-stop platform for all services. Join us and enjoy exclusive features.</p>
+    <a href="register.html" class="btn btn-primary btn-lg mt-3">Get Started</a>
+  </div>
+
+  <!-- Features Section -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">My Future</h2>
+    <div class="row features justify-content-center">
+      <div class="col-md-4">
+        <img src="images/ayang1.jpeg" alt="Feature 1">
+        <h3>Feature 1</h3>
+        <p>Discover the amazing women who are there to help you succeed.</p>
+      </div>
+      <div class="col-md-4">
+        <img src="images/ayang2.jpeg" alt="Feature 2">
+        <h3>Feature 2</h3>
+        <p>Access your dashboard and manage everything seamlessly.</p>
+      </div>
+      <div class="col-md-4">
+        <img src="images/ayang3.jpeg" class="rounded-circle" alt="Feature 3">
+        <h3>Feature 3</h3>
+        <p>Enjoy secure and fast access with top-notch security measures.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center py-4">
+    <p>&copy; 2024 MyWebsite. All Rights Reserved.</p>
+  </footer>
+  <img src="images/logo.png" alt="Logo" class="logo-fixed">
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
