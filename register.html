@@ -3,41 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Register</title>
-  <link href="bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Registrasi</title>
+  <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      background-color: #f4f7fa;
+    }
+    .card {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    .navbar-brand img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    }
+    footer {
+      background-color: #f8f9fa;
+    }
+  </style>
 </head>
 <body>
-  <div class="container mt-5">
-    <h2>Register</h2>
-    <form action="login.html" method="POST">
-      <div class="form-group">
-        <label for="name">Name:</label>
-        <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
-      </div>
-      <div class="form-group">
-        <label for="email">Email address:</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-      </div>
-      <div class="form-group">
-        <label for="pwd">Password:</label>
-        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
-      </div>
 
-      <!-- Dropdown for Jenis Kelamin -->
-      <div class="mb-3">
-        <label for="jk" class="form-label">Jenis Kelamin:</label>
-        <select id="jk" name="jk" class="form-select form-control">
-          <option value="Laki-laki">Laki-laki</option>
-          <option value="Perempuan">Perempuan</option>
-        </select>
-      </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <a class="navbar-brand" href="index.html" style="display: flex; align-items: center;">
+      <img src="images/logo.png" alt="Logo">
+      <span style="font-size: 1.3rem; font-weight: bold; color: #333;">Hadirrr</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+        <li class="nav-item"><a class="nav-link" href="register.html">Registrasi</a></li>
+      </ul>
+    </div>
+  </nav>
 
-      <button type="submit" class="btn btn-primary mt-3">Register</button>
-    </form>
+  <!-- Registrasi Form -->
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-4">
+        <div class="card p-4">
+          <h3 class="text-center mb-4">Registrasi</h3>
+          <form id="registerForm">
+            <div class="mb-3">
+              <label for="newUsername" class="form-label">Username</label>
+              <input type="text" id="newUsername" class="form-control" placeholder="Masukkan Username" required>
+            </div>
+            <div class="mb-3">
+              <label for="newPassword" class="form-label">Password</label>
+              <input type="password" id="newPassword" class="form-control" placeholder="Masukkan Password" required>
+            </div>
+            <!-- Pilihan Jenis Kelamin -->
+            <div class="mb-3">
+              <label class="form-label">Jenis Kelamin</label>
+              <div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="gender" id="male" value="Laki-laki" required>
+                  <label class="form-check-label" for="male"><i class="fas fa-male"></i> Laki-laki</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="gender" id="female" value="Perempuan">
+                  <label class="form-check-label" for="female"><i class="fas fa-female"></i> Perempuan</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="gender" id="other" value="Lainnya">
+                  <label class="form-check-label" for="other"><i class="fas fa-genderless"></i> Lainnya</label>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Registrasi</button>
+          </form>
+          <div class="text-center mt-3">
+            <a href="login.html" class="text-decoration-none">Sudah Punya Akun? Masuk!</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Footer -->
+  <footer class="bg-light text-center py-4">
+    &copy; Copyright by 22552011080_Dany Faturrochman_TIF RP 222 CNS
+  </footer>
+
+  <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

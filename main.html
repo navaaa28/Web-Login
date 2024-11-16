@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Main Menu</title>
   <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     /* Hero section styling */
     .hero {
@@ -14,26 +15,57 @@
       color: white;
       padding: 100px 0;
       text-align: center;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
     }
     .hero h1 {
       font-size: 3rem;
       font-weight: bold;
+      z-index: 2;
     }
     .hero p {
       font-size: 1.25rem;
+      z-index: 2;
     }
-    /* Main container styling */
     .container {
       margin-top: 50px;
+    }
+    .card {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+    .card-body {
+      padding: 30px;
+    }
+    .nav-item {
+      margin-left: 20px;
+    }
+    footer {
+      background-color: #f8f9fa;
     }
   </style>
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">MyWebsite</a>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav ml-auto">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <a class="navbar-brand" href="index.html" style="display: flex; align-items: center;">
+      <img src="images/logo.png" alt="Logo" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);">
+      <span style="font-size: 1.3rem; font-weight: bold; color: #333;">Hadirrr</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Logout</a></li>
       </ul>
     </div>
@@ -47,13 +79,54 @@
 
   <!-- Main Content -->
   <div class="container">
-    <h2>Dashboard Overview</h2>
-    <p>This is your main menu page. From here, you can access various features and manage your account.</p>
+    <h2 class="text-center my-4">Dashboard Overview</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body text-center">
+            <i class="fas fa-user-circle fa-3x text-primary"></i>
+            <h4 class="card-title mt-3">Account Management</h4>
+            <p class="card-text">Manage your profile and update personal details.</p>
+            <a href="#" class="btn btn-primary">Go to Account</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body text-center">
+            <i class="fas fa-clock fa-3x text-success"></i>
+            <h4 class="card-title mt-3">Attendance</h4>
+            <p class="card-text">Track your attendance and working hours.</p>
+            <a href="#" class="btn btn-success">View Attendance</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body text-center">
+            <i class="fas fa-cogs fa-3x text-warning"></i>
+            <h4 class="card-title mt-3">Settings</h4>
+            <p class="card-text">Manage your account settings and preferences.</p>
+            <a href="#" class="btn btn-warning">Go to Settings</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <!-- Bootstrap JS and dependencies -->
+  <!-- Footer -->
+  <footer class="bg-light text-center py-4">
+    &copy; Copyright by 22552011080_Dany Faturrochman_TIF RP 222 CNS
+  </footer>
+
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    document.querySelector("a[href='index.html']").addEventListener("click", function () {
+      alert("Anda berhasil logout!");
+    });
+  </script>
 </body>
 </html>

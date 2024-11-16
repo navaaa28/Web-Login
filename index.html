@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Homepage</title>
+  <title>Halaman Utama</title>
   <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
   <style>
-    /* Custom styling for hero section */
+    /* Custom styling */
     .hero {
       background-image: url('images/logo.png');
       background-size: cover;
@@ -22,26 +22,19 @@
     .hero p {
       font-size: 1.25rem;
     }
-    /* Features section styling */
-    .features .col-md-4 {
-      text-align: center;
-      margin-top: 20px;
-    }
     .features img {
-      width: 100%; /* Make images take full width of container */
-      max-width: 250px; /* Set a maximum width for images */
-      height: auto; /* Keep aspect ratio */
-      border-radius: 15px; /* Slightly rounded corners for rectangular images */
+      width: 100%;
+      max-width: 200px;
+      height: auto;
       margin-bottom: 10px;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+      border-radius: 15px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     }
-    .features h3 {
-      font-size: 1.2rem;
-      margin-top: 15px;
-    }
-    .features p {
-      font-size: 1rem;
-      color: #6c757d;
+    footer {
+      margin-top: 50px;
+      padding: 10px;
+      text-align: center;
+      background-color: #f8f9fa;
     }
     .logo-fixed {
       position: fixed;
@@ -60,62 +53,61 @@
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">MyWebsite</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-            <a class="nav-link" href="login.html">
-              Login
-              <div class="spinner-border text-muted" style="width: 1rem; height: 1rem; margin-left: 5px; display: none;" id="login-spinner"></div>
-            </a>
-          </li>          
-        <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
-      </ul>
-    </div>
-  </nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="index.html" style="display: flex; align-items: center;">
+    <img src="images/logo.png" alt="Logo" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);">
+    <span style="font-size: 1.2rem; font-weight: bold; color: #333;">Hadirrr</span>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+      <li class="nav-item"><a class="nav-link" href="register.html">Registrasi</a></li>
+    </ul>
+  </div>
+</nav>
 
-  <!-- Hero Section -->
+
+
   <div class="hero">
-    <h1>Welcome to MyWebsite</h1>
-    <p>Your one-stop platform for all services. Join us and enjoy exclusive features.</p>
-    <a href="register.html" class="btn btn-primary btn-lg mt-3">Get Started</a>
+    <h1>Selamat Datang di Perusahaan Kami!</h1>
+    <p>Platform terbaik untuk layanan Anda. Jelajahi lebih lanjut tentang kami.</p>
   </div>
 
-  <!-- Features Section -->
+  <!-- Informasi Perusahaan -->
   <div class="container my-5">
-    <h2 class="text-center mb-4">My Future</h2>
+    <h2 class="text-center mb-4">Informasi Perusahaan</h2>
     <div class="row features justify-content-center">
-      <div class="col-md-4">
-        <img src="images/ayang1.jpeg" alt="Feature 1">
-        <h3>Feature 1</h3>
-        <p>Discover the amazing women who are there to help you succeed.</p>
+      <div class="col-md-4 text-center">
+        <img src="images/ayang1.jpeg" alt="Tentang Kami">
+        <h3>Tentang Kami</h3>
+        <p>Pelajari lebih lanjut tentang visi, misi, dan sejarah perusahaan.</p>
+        <a href="detail_info1.html" class="btn btn-primary">Lihat Detail</a>
       </div>
-      <div class="col-md-4">
-        <img src="images/ayang2.jpeg" alt="Feature 2">
-        <h3>Feature 2</h3>
-        <p>Access your dashboard and manage everything seamlessly.</p>
+      <div class="col-md-4 text-center">
+        <img src="images/ayang2.jpeg" alt="Layanan Kami">
+        <h3>Layanan Kami</h3>
+        <p>Temukan layanan terbaik yang kami tawarkan.</p>
+        <a href="detail_info2.html" class="btn btn-primary">Lihat Detail</a>
       </div>
-      <div class="col-md-4">
-        <img src="images/ayang3.jpeg" class="rounded-circle" alt="Feature 3">
-        <h3>Feature 3</h3>
-        <p>Enjoy secure and fast access with top-notch security measures.</p>
+      <div class="col-md-4 text-center">
+        <img src="images/ayang3.jpeg" alt="Hubungi Kami">
+        <h3>Hubungi Kami</h3>
+        <p>Informasi kontak untuk kolaborasi dan kerja sama.</p>
+        <a href="detail_info3.html" class="btn btn-primary">Lihat Detail</a>
       </div>
     </div>
   </div>
 
   <!-- Footer -->
-  <footer class="bg-light text-center py-4">
-    <p>&copy; 2024 MyWebsite. All Rights Reserved.</p>
+  <footer>
+    @Copyright by 22552011080_Dany Faturrochman_TIF RP 222 CNS
   </footer>
-  <img src="images/logo.png" alt="Logo" class="logo-fixed">
 
-  <!-- Bootstrap JS and dependencies -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <img src="images/logo.png" alt="Logo" href="index.html" class="logo-fixed">
+
+  <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

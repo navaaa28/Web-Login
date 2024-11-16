@@ -4,54 +4,118 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
-  <link href="bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
-      background-color: #f8f9fa;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
+      background-color: #f4f7fa;
     }
     .card {
-      padding: 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    .navbar-brand img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    }
+    footer {
+      background-color: #f8f9fa;
+    }
+    .input-group-text {
+      background-color: #f1f3f5;
+    }
+    .form-control {
       border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
-    .btn-custom {
-      background-color: #007bff;
-      color: white;
-      border: none;
+    .logo-fixed {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 80px;
+      height: auto;
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
     }
-    .btn-custom:hover {
-      background-color: #0056b3;
+    .logo-fixed:hover {
+      opacity: 1;
     }
   </style>
 </head>
 <body>
-  <div class="container">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <a class="navbar-brand" href="index.html" style="display: flex; align-items: center;">
+      <img src="images/logo.png" alt="Logo">
+      <span style="font-size: 1.3rem; font-weight: bold; color: #333;">Hadirrr</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+        <li class="nav-item"><a class="nav-link" href="register.html">Registrasi</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Login Form -->
+  <div class="container my-5">
     <div class="row justify-content-center">
-      <div class="col-md-6">
-        <div class="card">
-          <h2 class="text-center mb-4">Login</h2>
-          <form method="POST" action="main.html">
-            <div class="form-group">
-              <label for="email">Email:</label>
-              <input type="email" class="form-control" id="email" name="email" required>
+      <div class="col-md-6 col-lg-4">
+        <div class="card p-4">
+          <h3 class="text-center mb-4">Login</h3>
+          <form id="loginForm">
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                <input type="text" id="username" class="form-control" placeholder="Masukkan Username" required>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="password">Password:</label>
-              <input type="password" class="form-control" id="password" name="password" required>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                <input type="password" id="password" class="form-control" placeholder="Masukkan Password" required>
+              </div>
             </div>
-            <button type="submit" class="btn btn-custom btn-block mt-3" name="login">Login</button>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
           </form>
+          <div class="text-center mt-3">
+            <a href="register.html" class="text-decoration-none">Belum punya akun? Registrasi</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center py-4">
+    &copy; Copyright by 22552011080_Dany Faturrochman_TIF RP 222 CNS
+  </footer>
+
+  <img src="images/logo.png" alt="Logo" href="index.html" class="logo-fixed">
+
+  <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent form submission
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      // Validasi login
+      if (username === "admin" && password === "123456") {
+        alert("Login berhasil!");
+        window.location.href = "main.html"; // Redirect ke halaman menu utama
+      } else {
+        alert("Username atau password salah!");
+      }
+    });
+  </script>
 </body>
 </html>
